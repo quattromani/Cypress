@@ -1,0 +1,19 @@
+.component-reveal-footer {
+	position: fixed;
+	overflow: visible;
+	bottom: 0;
+	width: 100%;
+	height: 5.5em;
+	background-color: $color-brand-primary;
+	z-index: -2;
+
+	ul {
+		@include horizontal-center;
+		@include padding($base-spacing 0);
+		@include horizontal-list;
+
+		img {
+			vertical-align: middle;
+		}
+	}
+}

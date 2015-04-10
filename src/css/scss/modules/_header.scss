@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+header[role=banner] {
+	position: relative;
+	background-color: $header-bg;
+	text-align: center;
+	z-index: 9;
+
+	@include media($mobile) {
+		@include padding($base-spacing);
+		text-align: left;
+	}
+}

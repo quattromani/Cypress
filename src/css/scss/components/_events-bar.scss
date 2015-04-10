@@ -1,0 +1,66 @@
+.component-events-bar {
+	position: relative;
+
+	.container	{
+		@include padding($base-spacing*4 0);
+		background-image: url(../../images/events-image.jpg);
+		background-repeat: no-repeat;
+		background-position: left top;
+
+		&:after {
+			content: url(../../images/white-bar.jpg);
+			position: absolute;
+			bottom: -.25em;
+			left: 0;
+			z-index: -1;
+		}
+	}
+
+	h2 {
+		@include font-size(72);
+		margin: 0;
+		font-weight: 900;
+	}
+
+	.events-bar-overlay {
+		position: absolute;
+		right: 0;
+		height: 90%;
+		width: 45%;
+		margin-top: $base-spacing;
+		background-color: rgba($color-brand-primary, .65);
+		z-index: 99;
+
+		@include media($tablet) {
+			width: 90%;
+		}
+
+		@include media($mobile) {
+			width: 100%;
+		}
+	}
+
+	.events-bar-overlay-text {
+		position: relative;
+		@include padding(($base-spacing*3) $base-spacing ($base-spacing*3) ($base-spacing*8));
+		width: 40%;
+		margin-bottom: ($base-spacing*2);
+		color: $color-white;
+		text-align: right;
+		z-index: 100;
+
+		@include media($tablet) {
+			@include padding(($base-spacing*3) $base-spacing ($base-spacing*3) $base-spacing);
+			width: 70%;
+		}
+
+		h2,
+		p {
+			color: currentColor;
+		}
+
+		@include media($mobile) {
+			width: 100%;
+		}
+	}
+}

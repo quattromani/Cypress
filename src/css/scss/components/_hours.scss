@@ -1,0 +1,13 @@
+.hours {
+	position: absolute;
+	right: 0;
+	bottom: $base-spacing * 9;
+	@include padding(($base-spacing/2) ($base-spacing*2));
+	background-color: rgba($color-brand-primary, $site-alpha);
+	text-align: right;
+	z-index: 999;
+
+	a {
+		color: $color-brand-primary-complimentary;
+	}
+}

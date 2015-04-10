@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.mall-logo {
+	img {
+		@include padding(($base-spacing/2) 0);
+
+		@include media($mobile) {
+			padding: 0;
+		}
+	}
+}

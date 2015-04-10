@@ -1,0 +1,8 @@
+.component-adblock {
+	@include padding($base-spacing 0);
+	background-color: $color-brand-primary;
+
+	img {
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,64 @@
+.hero-banner {
+	position: relative;
+	color: $color-white;
+
+	.sy-box {
+		max-width: 1200px;
+		@include margin(0 auto);
+	}
+
+	img {
+		margin: 0 auto;
+	}
+
+	.content {
+		background-color: transparent;
+	}
+
+	@include media($mobile) {
+		height: auto;
+	}
+
+	h1 {
+		@include font-size(70);
+		color: $color-white;
+
+		& + p {
+			@include margin(0);
+		}
+
+		@include media($mobile) {
+			@include font-size(55);
+		}
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	.content {
+		@include media($tablet) {
+			top: 0;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+
+	.resume {
+		&:hover {
+			color: $color-primary-red;
+			text-decoration: none;
+		}
+	}
+
+	hr {
+		border-top: 1px solid $base-font-color;
+		border-bottom: 0;
+	}
+
+	@include media($mobile) {
+		min-height: 0;
+	}
+}
+
