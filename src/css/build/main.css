@@ -5649,30 +5649,25 @@ nav {
   box-shadow: 0 10px 14px 1px rgba(116, 135, 145, 0.2);
   z-index: 9999; }
   nav .container {
-    display: table;
     width: 100%;
     max-width: 1000px;
     padding: 0; }
   nav ul.menu {
-    display: table-row;
-    float: left;
-    width: 100%;
     text-align: right;
     margin: 0; }
-    nav ul.menu > li {
-      margin: 0 1em; }
-      nav ul.menu > li:first-child {
-        margin-left: 0; }
-      nav ul.menu > li:last-child {
-        margin-right: 0; }
-      @media screen and (max-width: 1199px) {
-        nav ul.menu > li {
-          margin: 0; } }
+    nav ul.menu > li:first-child {
+      margin-left: 0; }
+    nav ul.menu > li:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 1199px) {
+      nav ul.menu > li {
+        margin: 0; } }
     nav ul.menu li {
       font-size: 16px;
       font-size: 1.6rem;
       position: relative;
-      display: table-cell;
+      display: inline-block;
+      float: left;
       line-height: normal;
       text-align: center;
       vertical-align: middle; }
@@ -5682,7 +5677,7 @@ nav {
       nav ul.menu li.hidden {
         display: none; }
       nav ul.menu li a {
-        padding: 2em 0.75em;
+        padding: 2em 1em;
         display: block;
         font-weight: 200;
         vertical-align: middle;
@@ -5692,8 +5687,13 @@ nav {
           background-color: #007bba;
           color: #fff;
           text-decoration: none; }
+      nav ul.menu li:first-child a:before {
+        content: url(/images/mall-nav-icon.png);
+        float: left;
+        margin-top: -4px;
+        margin-right: 1em; }
       nav ul.menu li img {
-        padding: 0 0.75em; }
+        padding: 2em 1em; }
       nav ul.menu li ul {
         display: none; }
         nav ul.menu li ul li {
@@ -5728,6 +5728,10 @@ nav {
             nav ul.menu li:hover ul li a:hover {
               background: #f1e4d0;
               color: #fff; }
+  nav .utility {
+    float: right !important; }
+  nav .search {
+    display: none; }
 
 a.open-panel,
 a.close-panel {

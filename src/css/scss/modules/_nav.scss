@@ -21,22 +21,16 @@ nav {
 	z-index: 9999;
 
 	.container {
-		display: table;
 		width: 100%;
 		max-width: 1000px;
 		@include padding(0, $base-spacing);
 	}
 
 	ul.menu {
-		display: table-row;
-		float: left;
-		width: 100%;
 		text-align: $nav-alignment;
 		@include margin(0);
 
 		> li {
-			@include margin(0 $base-spacing);
-
 			&:first-child {
 				margin-left: 0;
 			}
@@ -53,7 +47,8 @@ nav {
 		li {
 			@include font-size($nav-font-size);
 			position: relative;
-			display: table-cell;
+			display: inline-block;
+			float: left;
 			line-height: normal;
 			text-align: center;
 			vertical-align: middle;
@@ -73,7 +68,7 @@ nav {
 			}
 
 			a {
-				@include padding(($base-spacing*2) .75em);
+				@include padding(($base-spacing*2) $base-spacing);
 				display: block;
 				font-weight: 200;
 				vertical-align: middle;
@@ -87,8 +82,19 @@ nav {
 				}
 			}
 
+			&:first-child {
+				a {
+					&:before {
+						content: url(/images/mall-nav-icon.png);
+						float: left;
+						margin-top: -4px;
+						margin-right: 1em;
+					}
+				}
+			}
+
 			img {
-				@include padding(0 .75em);
+				@include padding(($base-spacing*2) $base-spacing);
 			}
 
 			ul {
@@ -134,6 +140,14 @@ nav {
 				}
 			}
 		}
+	}
+
+	.utility {
+		float: right !important;
+	}
+
+	.search {
+		display: none;
 	}
 }
 

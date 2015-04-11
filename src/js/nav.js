@@ -24,7 +24,7 @@ var nav = $('nav');
 $(window).scroll(function() {
   if( $(this).scrollTop() > (bannerHeight - navHeight - hdr) ) {
     nav.addClass(ns);
-    $('nav li.hidden').css('display', 'table-cell');
+    $('nav li.hidden').css('display', 'inline');
     $('header').css('z-index', '-1');
     // $('.header-banner').css('margin-top', navHeight);
   } else {
