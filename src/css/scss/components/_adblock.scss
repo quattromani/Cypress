@@ -2,6 +2,10 @@
 	@include padding($base-spacing 0);
 	background-color: $color-brand-primary;
 
+	.adblock {
+		@include outer-container;
+	}
+
 	img {
 		margin: 0 auto;
 	}

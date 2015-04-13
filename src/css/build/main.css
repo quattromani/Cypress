@@ -6705,6 +6705,14 @@ ul.tabs {
 .component-adblock {
   padding: 1em 0;
   background-color: #00273e; }
+  .component-adblock .adblock {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+    .component-adblock .adblock::after {
+      clear: both;
+      content: "";
+      display: table; }
   .component-adblock img {
     margin: 0 auto; }
 
