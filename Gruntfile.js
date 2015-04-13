@@ -14,13 +14,6 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
-  	'gh-pages': {
-  		options: {
-  			base: 'dist'
-  		},
-  		src: '**/*'
-  	},
-
   	config: {
   		src: 'src',
   		dist: 'dist'
