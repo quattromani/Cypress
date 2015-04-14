@@ -62,3 +62,7 @@
 	}
 }
 
+.inner-hero-banner {
+	@include outer-container;
+}
+

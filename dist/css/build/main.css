@@ -6014,6 +6014,15 @@ footer {
     .hero-banner {
       min-height: 0; } }
 
+.inner-hero-banner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .inner-hero-banner::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 .styleguide header .follow-me {
   background-color: #43b7d8;
   border: 2px solid #43b7d8; }
